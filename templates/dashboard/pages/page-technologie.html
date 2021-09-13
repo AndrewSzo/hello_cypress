@@ -1,0 +1,76 @@
+{% extends 'dashboard/main/base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Umiejętności</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                <!-- Knowledge base Jumbotron -->
+                <section id="knowledge-base-search">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card knowledge-base-bg text-center" style="background-image: url('../../../app-assets/images/banner/banner.png')">
+                                <div class="card-body">
+                                    <h2 class="text-primary">Jakiej umiejętności chcesz się nauczyć?</h2>
+                                    <p class="card-text mb-2">
+                                        <!--<span>Popular searches: </span><span class="font-weight-bolder">Sales automation, Email marketing</span>-->
+                                    </p>
+                                    <form class="kb-search-input">
+                                        <div class="input-group input-group-merge">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i data-feather="search"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" id="searchbar" placeholder="Czego szukasz..." />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--/ Knowledge base Jumbotron -->
+
+
+                <!-- Knowledge base -->
+                <section id="knowledge-base-content">
+                    <div class="row">
+                        {% for tech in list_of_tech %}
+                        <div class="col-xl-3 col-md-4 col-sm-6">
+                            <a href="{{ tech.get_absolute_url }}">
+                            <div class="card card-profile">
+                                <div class="card-body">
+                                    <div class="profile-image-wrapper">
+                                    <div class="profile-image">
+                                        <div class="avatar">
+                                            <img src="{{ MEDIA_URL }}{{ tech.image.url }}" alt="Python">
+                                        </div>
+                                    </div>
+                                </div>
+                                    <h2 class="font-weight-bolder">{{tech.title}}</h2>
+                                </div>
+                            </div>
+                                </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </section>
+                <!-- Knowledge base ends -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+{% endblock %}

@@ -1,0 +1,339 @@
+{% extends 'dashboard/main/base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- BEGIN: Content-->
+<div class="app-content content ecommerce-application">
+    <div class="content-overlay"></div>
+    <div class="header-navbar-shadow"></div>
+    <div class="content-wrapper container-xxl p-0">
+        <div class="content-header row">
+            <div class="content-header-left col-md-9 col-12 mb-2">
+                <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">{{tech.title}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+            </div>
+        </div>
+        <div class="content-detached content-right">
+            <div class="content-body">
+                <!-- E-commerce Content Section Starts -->
+                <section id="ecommerce-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="ecommerce-header-items">
+                                <div class="result-toggler">
+                                    <button class="navbar-toggler shop-sidebar-toggler" type="button"
+                                        data-toggle="collapse">
+                                        <span class="navbar-toggler-icon d-block d-lg-none"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-menu">
+                                                <line x1="3" y1="12" x2="21" y2="12"></line>
+                                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                                <line x1="3" y1="18" x2="21" y2="18"></line>
+                                            </svg></span>
+                                    </button>
+                                    <div class="search-results"></div>
+                                </div>
+                                <div class="view-options d-flex">
+                                    <div class="btn-group dropdown-sort">
+                                        <button type="button"
+                                            class="btn btn-outline-primary dropdown-toggle mr-1 waves-effect"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="active-sorting">Highest</span>
+                                        </button>
+                                        <div class="dropdown-menu" style="">
+                                            <a class="dropdown-item" href="javascript:void(0);">Featured</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Lowest</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Highest</a>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label
+                                            class="btn btn-icon btn-outline-primary view-btn grid-view-btn waves-effect active">
+                                            <input type="radio" name="radio_options" id="radio_option1" checked="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-grid font-medium-3">
+                                                <rect x="3" y="3" width="7" height="7"></rect>
+                                                <rect x="14" y="3" width="7" height="7"></rect>
+                                                <rect x="14" y="14" width="7" height="7"></rect>
+                                                <rect x="3" y="14" width="7" height="7"></rect>
+                                            </svg>
+                                        </label>
+                                        <label
+                                            class="btn btn-icon btn-outline-primary view-btn list-view-btn waves-effect">
+                                            <input type="radio" name="radio_options" id="radio_option2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-list font-medium-3">
+                                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- E-commerce Content Section Starts -->
+
+                <!-- background Overlay when sidebar is shown  starts-->
+                <div class="body-content-overlay"></div>
+                <!-- background Overlay when sidebar is shown  ends-->
+
+                <!-- E-commerce Search Bar Starts -->
+                <section id="ecommerce-searchbar" class="ecommerce-searchbar">
+                    <div class="row mt-1">
+                        <div class="col-sm-12">
+                            <div class="input-group input-group-merge">
+                                <input type="text" class="form-control search-product" id="shop-search"
+                                    placeholder="Search Product" aria-label="Search..." aria-describedby="shop-search">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                            height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-search text-muted">
+                                            <circle cx="11" cy="11" r="8"></circle>
+                                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                        </svg></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- E-commerce Search Bar Ends -->
+
+                <!-- E-commerce Products Starts -->
+                <section id="ecommerce-products" class="grid-view">
+                    <div class="card ecommerce-card">
+                        <div class="item-img text-center">
+                            <a href="app-ecommerce-details.html">
+                                <img class="img-fluid card-img-top"
+                                    src="{% static 'dashboard/app-assets/images/pages/eCommerce/1.png' %}"
+                                    alt="img-placeholder"></a>
+                        </div>
+                        <div class="card-body">
+                            <div class="item-wrapper">
+                                <div class="item-rating">
+                                    <p>Kurs</p>
+                                </div>
+                                <div>
+                                    <h6 class="item-price">$339.99</h6>
+                                </div>
+                            </div>
+                            <h6 class="item-name">
+                                <a class="text-body" href="app-ecommerce-details.html">Apple Watch Series 5</a>
+                                <span class="card-text item-company">By <a href="javascript:void(0)"
+                                        class="company-name">Apple</a></span>
+                            </h6>
+                            <p class="card-text item-description">
+                                On Retina display that never sleeps, so it’s easy to see the time and other important
+                                information, without
+                                raising or tapping the display. New location features, from a built-in compass to
+                                current elevation, help users
+                                better navigate their day, while international emergency calling1 allows customers to
+                                call emergency services
+                                directly from Apple Watch in over 150 countries, even without iPhone nearby. Apple Watch
+                                Series 5 is available
+                                in a wider range of materials, including aluminium, stainless steel, ceramic and an
+                                all-new titanium.
+                            </p>
+                        </div>
+                        <div class="item-options text-center">
+                            <div class="item-wrapper">
+                                <div class="item-cost">
+                                    <h4 class="item-price">$339.99</h4>
+                                </div>
+                            </div>
+                            <a href="javascript:void(0)"
+                                class="btn btn-light btn-wishlist waves-effect waves-float waves-light">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-heart">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                    </path>
+                                </svg>
+                                <span>Ulubione</span>
+                            </a>
+                            <a href="javascript:void(0)"
+                                class="btn btn-primary btn-cart waves-effect waves-float waves-light">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-shopping-cart">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                <span class="add-to-cart">Przejdź do strony</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- E-commerce Products Ends -->
+
+                <!-- E-commerce Pagination Starts -->
+                <section id="ecommerce-pagination">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center mt-2">
+                                    <li class="page-item prev-item"><a class="page-link" href="javascript:void(0);"></a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                                    <li class="page-item" aria-current="page"><a class="page-link"
+                                            href="javascript:void(0);">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">6</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:void(0);">7</a></li>
+                                    <li class="page-item next-item"><a class="page-link" href="javascript:void(0);"></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+                <!-- E-commerce Pagination Ends -->
+
+            </div>
+        </div>
+        <div class="sidebar-detached sidebar-left">
+            <div class="sidebar">
+                <!-- Ecommerce Sidebar Starts -->
+                <div class="sidebar-shop">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h6 class="filter-heading d-none d-lg-block">Wyszukaj interesujące cię materiały</h6>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Price Filter starts -->
+                            <div class="multi-range-price">
+                                <h6 class="filter-title mt-0">Rodzaj</h6>
+                                <ul class="list-unstyled price-range" id="price-range">
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="priceAll" name="price-range"
+                                                class="custom-control-input" checked="">
+                                            <label class="custom-control-label" for="priceAll">Wszystkie</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="priceRange1" name="price-range"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="priceRange1">Kurs</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="priceRange2" name="price-range"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="priceRange2">Artykuł</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="priceARange3" name="price-range"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="priceARange3">Video</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Price Filter ends -->
+
+                            <!-- Categories Starts -->
+                            <div id="product-categories">
+                                <h6 class="filter-title">Poziom</h6>
+                                <ul class="list-unstyled categories-list">
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="category1" name="level-filter"
+                                                class="custom-control-input" checked="">
+                                            <label class="custom-control-label" for="category1">Junior</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="category2" name="level-filter"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="category2">Mid</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="category3" name="level-filter"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="category3">Senior</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Categories Ends -->
+
+                            <!-- Categories Starts -->
+                            <div id="skills-categories">
+                                <h6 class="filter-title">Kategoria</h6>
+                                <ul class="list-unstyled categories-list">
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="category11" name="category-filter"
+                                                class="custom-control-input" checked="">
+                                            <label class="custom-control-label" for="category11">Programowanie</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="category22" name="category-filter"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="category22">Testowanie</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="category32" name="category-filter"
+                                                class="custom-control-input">
+                                            <label class="custom-control-label" for="category33">DevOps</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Categories Ends -->
+
+                            <!-- Clear Filters Starts -->
+                            <div id="clear-filters">
+                                <button type="button"
+                                    class="btn btn-block btn-primary waves-effect waves-float waves-light">Clear All
+                                    Filters</button>
+                            </div>
+                            <!-- Clear Filters Ends -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Ecommerce Sidebar Ends -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END: Content-->
+
+{% endblock %}

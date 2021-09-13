@@ -1,0 +1,2 @@
+{% load i18n %}
+{% blocktrans %}Podstawowy adres e-mail został ustawiony pomyślnie.{% endblocktrans %}
