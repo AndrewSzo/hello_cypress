@@ -18,7 +18,7 @@
     <meta name="author" content="PIXINVENT">
     <title>HelloCoder - Twoje miejsce rozwoju w IT</title>
     <link rel="apple-touch-icon" href="{% static 'dashboard/app-assets/images/ico/apple-icon-120.png' %}">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'dashboard/app-assets/images/logo/favicon.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'dashboard/app-assets/images/logo/faviconss.png' %}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
@@ -72,14 +72,14 @@
                 <div class="auth-wrapper auth-v2">
                     <div class="auth-inner row m-0">
                         <!-- Brand logo--><a class="brand-logo" href="#">
-                            <img src="{% static 'dashboard/app-assets/images/logo/hellocoderlogo.png' %}" alt="">
+                            <img src="{% static 'dashboard/app-assets/images/logo/hellocypresslogo.png' %}" alt="">
                         </a>
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
                             <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img
                                     class="img-fluid"
-                                    src="{% static 'dashboard/app-assets/images/pages/loginregisterimg.jpg' %}"
+                                    src="{% static 'dashboard/app-assets/images/pages/dashboard/cypresswall.png' %}"
                                     alt="Login">
                             </div>
                         </div>
@@ -87,8 +87,8 @@
                         <!-- Login-->
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                                <h2 class="card-title font-weight-bold mb-1">Witaj Coderze! 👋</h2>
-                                <p class="card-text mb-2">Zaloguj się do swojego konta i zacznij przygodę</p>
+                                <h2 class="card-title font-weight-bold mb-1">Witaj! 👋</h2>
+                                <p class="card-text mb-2">Zacznij swoją przygodę z Cypressem</p>
                                 <form class="auth-login-form mt-2" action="{% url 'account_login' %}" method="POST"
                                     novalidate="novalidate">
                                     {% csrf_token %}
@@ -120,7 +120,7 @@
                                         jeszcze konta?</span><a href="{{ signup_url }}"><span>&nbsp;Zarejestruj
                                             się</span></a>{% endblocktrans %}
                                 </p>
-                                <--<p class="text-center mt-2"><span>A może</span><a
+                                <!--<p class="text-center mt-2"><span>A może</span><a
                                         href="{% url 'account_reset_password' %}"
                                         class="auth-link text-black">&nbsp;Zapomniałeś hasła?</a>
                                     </p>-->

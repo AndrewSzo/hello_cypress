@@ -37,8 +37,8 @@ $(window).on('load', function () {
   // On load Toast
   setTimeout(function () {
     toastr['success'](
-      'Zalogowałeś się pomyślnie!',
-      '👋 Witaj Coderze!',
+      'Zacznij poznawać Cypressa!',
+      '👋 Witaj!',
       {
         closeButton: true,
         tapToDismiss: false,
