@@ -13,8 +13,8 @@ urlpatterns = [
     path('form-wizard/', views.form_wizard, name='form-wizard'),
     path('table-basic/', views.table_basic, name='table-basic'),
     path('table-advance/', views.table_advance, name='table-advance'),
-    path('accounts/login', views.login, name='login'),
-    path('accounts/signup', views.register, name='register'),
+    path('accounts/login/', views.login, name='login'),
+    path('accounts/signup/', views.register, name='register'),
 
 ]
 

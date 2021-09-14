@@ -115,10 +115,15 @@
                                     <button class="btn btn-primary btn-block waves-effect waves-float waves-light"
                                         tabindex="4" type="submit">Zaloguj się</button>
                                 </form>
+
                                 <p class="text-center mt-2"><span>{% blocktrans with site.name as site_name %}Nie masz
                                         jeszcze konta?</span><a href="{{ signup_url }}"><span>&nbsp;Zarejestruj
                                             się</span></a>{% endblocktrans %}
                                 </p>
+                                <--<p class="text-center mt-2"><span>A może</span><a
+                                        href="{% url 'account_reset_password' %}"
+                                        class="auth-link text-black">&nbsp;Zapomniałeś hasła?</a>
+                                    </p>-->
                             </div>
                             <!-- /Login-->
                         </div>

@@ -9,15 +9,15 @@ def home(request):
 
 
 def login(request):
-    return render(request, 'registration/login.html')
+    return render(request, 'account/login.html')
 
 
 def logout(request):
-    return render(request, 'dashboard/login.html')
+    return render(request, 'account/login.html')
 
 
 def register(request):
-    return render(request, 'registration/signup.html')
+    return render(request, 'account/signup.html')
 
 
 def dashboard(request):
